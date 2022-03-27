@@ -26,17 +26,17 @@ export function personUpdate(data) {
 export function objectFieldsList(obj1, obj2, obj3) {
     return Object.keys({ ...obj1, ...obj2, ...obj3 }).sort();
 
-    /* let result = [];
-let arr = new Array(obj1, obj2, obj3);
+    /*let result = [];
+  let arr = new Array(obj1, obj2, obj3);
 
-for (let obj in arr) {
-  for (let property in obj) {
-    if (obj.hasOwnProperty(property)) {
-      result.push(property.toString());
+  for (let obj in arr) {
+    for (let property in obj) {
+      if (obj.hasOwnProperty(property)) {
+        result.push(property.toString());
+      }
     }
   }
-}
-return result; */
+  return result; */
 }
 
 /*
@@ -46,14 +46,14 @@ return result; */
 */
 export function objectClone(obj, count) {
     let result = [];
-    /* let counter = {
-  id: 0,
-} */
+    /*let counter = {
+    id: 0,
+  } */
 
     for (let i = 0; i < count; i++) {
         result.push({ id: i, ...JSON.parse(JSON.stringify(obj)) });
         /* result.push({...counter, ...obj});
-  counter.id++; */
+    counter.id++; */
     }
     return result;
 }
